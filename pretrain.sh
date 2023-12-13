@@ -5,7 +5,7 @@ export MASTER_PORT=$((12000 + $RANDOM % 20000))  # Randomly set master_port to a
 export OMP_NUM_THREADS=1  # Control the number of threads
 
 OUTPUT_DIR='YOUR_PATH/work_dir/vit_g_hybrid_pt_1200e'  # Your output folder for deepspeed config file, logs and checkpoints
-DATA_PATH='YOUR_PATH/data/hybrid_train.csv'  # The data list file path.
+DATA_PATH='official_hmdb_splits1/train.csv'  # The data list file path.
 # pretrain data list file follows the following format
 # for the video data line: video_path, 0, -1
 # for the rawframe data line: frame_folder_path, start_index, total_frames
