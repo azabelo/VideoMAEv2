@@ -20,7 +20,7 @@ SRUN_ARGS=${SRUN_ARGS:-""}  # Other slurm task args
 PY_ARGS=${@:2}  # Other training args
 
 # Please refer to `run_mae_pretraining.py` for the meaning of the following hyperreferences
-srun -p $PARTITION \
+python3 run_mae_pretraining \
         --job-name=${JOB_NAME} \
         --gres=gpu:${GPUS_PER_NODE} \
         --ntasks=${GPUS} \
