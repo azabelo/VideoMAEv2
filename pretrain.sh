@@ -20,14 +20,6 @@ SRUN_ARGS=${SRUN_ARGS:-""}  # Other slurm task args
 PY_ARGS=${@:2}  # Other training args
 
 # Please refer to `run_mae_pretraining.py` for the meaning of the following hyperreferences
-python3 run_mae_pretraining.py \
-        --gpu ${GPUS_PER_NODE} \
-        --ntasks ${GPUS} \
-        --ntasks-per-node ${GPUS_PER_NODE} \
-        --cpus-per-task ${CPUS_PER_TASK} \
-        --kill-on-bad-exit 1 \
-        --async \
-        ${SRUN_ARGS} \
         python -u run_mae_pretraining.py \
         --data_path ${DATA_PATH} \
         --mask_type tube \
