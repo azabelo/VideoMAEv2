@@ -264,9 +264,9 @@ def get_model(args):
         decoder_depth=args.decoder_depth,
         with_cp=args.with_checkpoint)
 
-    if version.parse(torch.__version__) > version.parse('1.13.1'):
-        torch.set_float32_matmul_precision('high')
-        model = torch.compile(model)
+    # if version.parse(torch.__version__) > version.parse('1.13.1'):
+    #     torch.set_float32_matmul_precision('high')
+    #     model = torch.compile(model)
 
     return model
 
